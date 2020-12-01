@@ -1,5 +1,5 @@
 / setup
-i: `i$0:`1.txt
+i:`i$0:`1.txt
 
 / first: k7 has a cmb primitive, so we can just do this (it's a bit slow):
 / {*/*(2020=+/)#i@cmb[x;#i]}'2 3
@@ -7,7 +7,7 @@ i: `i$0:`1.txt
 / no such cmb in k9 (yet).
 
 / solution assumes no repeated numbers - check this:
-=/#'(i;?i)
+i~?i
 / no repeats - good. so 1010 not an answer in #1, so we can take with replacement
 / of course all of the below assumes 2020-a+b is not a repeat of a or b :)
 
