@@ -16,10 +16,10 @@ t:i@+!2##i
 */t@*&~d:2020-+/+t
 */(t,'d)@*&i'd
 
-/ approach 2: a bit more readable
+/ approach 2: table without ksql
 t: +`a`b!i@!2##i
 */*(:2020=a+b)#t
-*/*(:i'c)#update c:2020-a+b from t
+*/*(:i'c)#t,'+`c!2020-+/'t
 
 / approach 3: full ksql
 t: +`a`b!i@!2##i
