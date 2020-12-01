@@ -8,7 +8,7 @@ i: `i$0:`1.txt
 
 / approach 1: golf
 t:i@+!2##i
-*/t@*&~d:2020-+/+t
+*/t(d:2020-+/+t)?0
 */*(i'*|+)#t,'d
 
 / approach 2: a bit more readable
