@@ -1,9 +1,8 @@
 / setup
 i: `i$0:`1.txt
 
-/ first: k7 has a cmb primitive, so we can just do this
-/ (it's a bit slow):
-{*/*(2020=+/)#i@cmb[x;#i]}'2 3
+/ first: k7 has a cmb primitive, so we can just do this (it's a bit slow):
+/ {*/*(2020=+/)#i@cmb[x;#i]}'2 3
 
 / no such cmb in k9 (yet).
 
