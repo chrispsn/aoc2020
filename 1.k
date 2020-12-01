@@ -7,9 +7,9 @@ i: `i$0:`1.txt
 / of course all of the below assumes 2020-a+b is not a repeat of a or b :)
 
 / approach 1: golf
-t: i@+!2##i
-*/t(s:+/+t)?2020
-*/*(t,'u)@&i'u:2020-s
+t:i@+!2##i
+*/t(s:+/+t)?y:2020
+*/*(t,'u)@&i'u:y-s
 
 / approach 2: make it a table. a bit more readable
 t: +`a`b!i@!2##i
