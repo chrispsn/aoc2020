@@ -19,7 +19,7 @@ t:i@+!2##i
 / approach 2: table without ksql
 t:`a`b!i@!2##i
 t:+t,`c!2020-+/t
-*/*`c_#[:~c;t]
+*/*`c_(:~c)#t
 */*(:i'c)#t
 
 / approach 3: full ksql
