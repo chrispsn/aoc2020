@@ -20,4 +20,4 @@ x:{(`i$"-"\x;z=*y)}.'" "\'input
 / fourth cut: tried exprs as alt to {y}/ style - didn't work
 x:{`a`b!(`i$"-"\x;z=*y)}.'" "\'input
 614~+/x@' :_[*a;!1+*|a]'+/b
-354~+/~=/+x :b@'a-1kkjj
+354~+/~=/+x :b@'a-1
