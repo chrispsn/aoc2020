@@ -11,3 +11,8 @@ input: 0:`2.txt
 x:{(`i$"-"\x;z=*y)}.'" "\'input
 614~+/{(+/y)within 0 1+x}/'x
 354~+/{1=+/y -1+x}/'x
+
+/ third cut (nb: on phone, can't test):
+x:{(`i$"-"\x;z=*y)}.'" "\'input
+614~+/{(+/y)within 0 1+x}/'x
+354~+/{~=/y x-1}/'x
