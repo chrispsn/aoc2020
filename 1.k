@@ -1,6 +1,11 @@
 / setup
 i:`i$0:`1.txt
 
+/ attila's is the best so far - but left some notes below on my own approach
+
+*/i#2020-i
+*/i#2020-?,/i+\:i
+
 / first: k7 has a cmb primitive, so we can just do this (it's a bit slow):
 / {*/*(2020=+/)#i@cmb[x;#i]}'2 3
 
