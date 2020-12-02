@@ -10,9 +10,9 @@ input: 0:`2.txt
 / second cut:
 x:{(`i$"-"\x;z=*y)}.'" "\'input
 614~+/{(+/y)within 0 1+x}/'x
-354~+/{1=+/y -1+x}/'x
+354~+/{1=+/y@-1+x}/'x
 
-/ third cut (nb: on phone, can't test):
+/ third cut:
 x:{(`i$"-"\x;z=*y)}.'" "\'input
-614~+/{(+/y)within 0 1+x}/'x
-354~+/{~=/y x-1}/'x
+614~+/{({x_!1+y}/x)'+/y}/'x      / 'within' better?
+354~+/~{=/y@x-1}/'x
