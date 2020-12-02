@@ -35,4 +35,11 @@ x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 x:`a`b`c!+({(`i$"-"\x),,z=*y}." "\)@'input
 614 354~+/'x :~(|/(a>;b<)@\:+/'c;=/'c@'+(a;b)-1)
 
+/ seventh cut: wip. broken atm.
+/ now that have only two cols,
+/ could even lose the dict and revert to {y}/
+x:`a`b!+({(`i$"-"\x;z=*y)}." "\)@'input
+614 354~+/'x :((+/'b)within'a;~=/'b@'+a-1)
+
+
 \\
