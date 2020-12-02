@@ -29,6 +29,9 @@ x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 
 / sixth cut: remove redundancies
 / the `i$ in line 1 looks ripe for vectorisation...
+/ and could compress a,b into a single col
+/ if can work out how to check interval membership;
+/ ngn's #2 soln appears to have </: for this purpose
 x:`a`b`c!+({(`i$"-"\x),,z=*y}." "\)@'input
 614 354~+/'x :~(|/(a>;b<)@\:+/'c;=/'c@'+(a;b)-1)
 
