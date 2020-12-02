@@ -27,4 +27,8 @@ x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 614~+/x :~|/(a>;b<)@\:+/'c
 354~+/x :~=/'c@'-1+a,'b
 
+/ sixth cut: remove redundancies
+x:`a`b`c!+{(`i$"-"\x),,z=*y}.'" "\'input
+614 354~+/'x :~(|/(a>;b<)@\:+/'c;=/'c@'-1+a,'b)
+
 \\
