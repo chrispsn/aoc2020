@@ -28,7 +28,8 @@ x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 354~+/x :~=/'c@'-1+a,'b
 
 / sixth cut: remove redundancies
+/ that = and the "-"\ split in line 1 look ripe for vectorisation...
 x:`a`b`c!+{(`i$"-"\x),,z=*y}.'" "\'input
-614 354~+/'x :~(|/(a>;b<)@\:+/'c;=/'c@'-1+a,'b)
+614 354~+/'x :~(|/(a>;b<)@\:+/'c;=/'c@'+(a;b)-1)
 
 \\
