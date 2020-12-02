@@ -20,9 +20,9 @@ x:{(`i$"-"\x;z=*y)}.'" "\'input
 / fourth cut: tried exprs as alt to {y}/ style - kinda works
 x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 614~+/x@' :_[a;!1+b]'+/c      / 'within' better?
-354~+/~=/+x@' :c@-1+a,b
+354~+/~x@' :=/c@-1+a,b
 
-/ fifth cut: more vectorised?
+/ fifth cut: more vectorised
 x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 614~+/x :~|/(a>;b<)@\:+/'c
-354~+/~=/+x :c@'-1+a,'b
+354~+/~x :=/'c@'-1+a,'b
