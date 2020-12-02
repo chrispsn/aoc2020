@@ -24,7 +24,7 @@ x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 
 / fifth cut: more vectorised
 x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
-614~+/x :~|/(a>;b<)@\:+/'ck
+614~+/x :~|/(a>;b<)@\:+/'c
 354~+/x :~=/'c@'-1+a,'b
 
 \\
