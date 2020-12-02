@@ -35,12 +35,9 @@ x:{`a`b`c!(`i$"-"\x),,z=*y}.'" "\'input
 x:`a`b`c!+({(`i$"-"\x),,z=*y}." "\)@'input
 614 354~+/'x :~(|/(a>;b<)@\:+/'c;=/'c@'+(a;b)-1)
 
-/ seventh cut: reverted to 'within' to shorten.
-/ need a more vector-y soln for comparison.
-/ now that have only two cols,
-/ maybe lose the dict and revert to {y}/ ?
-x:`a`b!+({(`i$"-"\x;z=*y)}." "\)@'input
-614 354~+/'x :((+/'b)within'0 1+/:a;~=/'b@'a-1)
+/ seventh cut: works, but not nice!
+x:+({(`i$"-"\x;z=*y}}." "\)@'input
+614 354~+/'~{(|/({(x>;y<)}/+x)@\:+/'y;=/'y@'x-1)}/x
 
 
 \\
