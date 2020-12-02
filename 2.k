@@ -16,3 +16,8 @@ x:{(`i$"-"\x;z=*y)}.'" "\'input
 x:{(`i$"-"\x;z=*y)}.'" "\'input
 614~+/{({x_!1+y}/x)'+/y}/'x      / 'within' better?
 354~+/~{=/y@x-1}/'x
+
+/ fourth cut: tried exprs as alt to {y}/ style - didn't work
+x:{`a`b!(`i$"-"\x;z=*y)}.'" "\'input
+614~+/x@' :_[*a;!1+*|a]'+/b
+354~+/~=/+x :b@'a-1kkjj
