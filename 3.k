@@ -36,7 +36,7 @@ f:{+/inputs@+/(1;rT)*@[++\(y div dT)#,x,y;0;rT mod]}/
 i: 0:`3.txt
 r: #i; c: #*i
 I: "#"=,/i
-f:{+/I@+/(1;c)*(c;0)mod'++\r#,x}
+f: {+/I@+/(1;c)*(c;0)mod'+x*/:!r}
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
@@ -44,7 +44,7 @@ f:{+/I@+/(1;c)*(c;0)mod'++\r#,x}
 i: 0:`3.txt
 r: #i; c: #*i
 I: "#"=i
-f:{+/{I[y][x]}/'+(c;0)mod'++\r#,x}    / would rather (I .)' instead of {I{y][x]} but broken in 2020.11.23 ?
+f: {+/{I[y][x]}/'+(c;0)mod'+x*/:!r}    / would rather (I .)' instead of {I{y][x]} but broken in 2020.11.23 ?
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
