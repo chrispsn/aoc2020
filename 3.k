@@ -46,7 +46,7 @@ i: 0:`3.txt
 r: #i
 c: #*i
 I: "#"=i
-f:{+/{I[y][x]}/'+(c;0)mod'++\r#,x}    / where is (x .)' !
+f:{+/{I[y][x]}/'+(c;0)mod'++\r#,x}    / would rather (I .)' instead of {I{y][x]} but broken in 2020.11.23 ?
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
