@@ -19,12 +19,23 @@ f:{+/inputs@+/(1;rT)*@[++\(y div dT)#,x,y;0;rT mod]}/
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
-/ Third cut: tighten up (on phone, will check later)
+/ Third cut: tighten up
 
-inputs: 0:`3.txt
-dT: #inputs
-rT: #*inputs
-inputs: "#"=,/inputs
-f:{+/inputs@+/(1;rT)*@[x*1_x[1]div dT;0;rT mod]}
+i: 0:`3.txt
+r: #i
+c: #*i
+I: "#"=,/i
+f:{+/I@+/(1;c)*@[++\r#,x;0;c mod]}
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
+
+/ Or, revised nested:
+i: 0:`3.txt
+r: #i
+c: #*i
+I: "#"=i
+f:{+/{I[y][x]}/'+@[++\r#,x;0;c mod]}    / (x .)' broken in 2020.11.23?
+191~f 3 1
+1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
+
+\\
