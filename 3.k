@@ -1,3 +1,15 @@
+input:("..##......."
+       "#...#...#.."
+       ".#....#..#."
+       "..#.#...#.#"
+       ".#...##..#."
+       "..#.##....."
+       ".#.#.#....#"
+       ".#........#"
+       "#.##...#..."
+       "#...##....#"
+       ".#..#...#.#")
+
 / First cut (stole early compare from Phineas - previously did comparison in fn...)
 
 input: "#"=0:`3.txt
@@ -22,17 +34,19 @@ f:{+/inputs@+/(1;rT)*@[++\(y div dT)#,x,y;0;rT mod]}/
 / Third cut: tighten up
 
 i: 0:`3.txt
-r: #i; c: #*i
+r: #i
+c: #*i
 I: "#"=,/i
-f:{+/I@+/(1;c)*@[++\r#,x;0;c mod]}
+f:{+/I@+/(1;c)*(c;0)mod'++\r#,x}
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
 / Or, revised nested:
 i: 0:`3.txt
-r: #i; c: #*i
+r: #i
+c: #*i
 I: "#"=i
-f:{+/{I[y][x]}/'+@[++\r#,x;0;c mod]}    / (x .)' broken in 2020.11.23?
+f:{+/{I[y][x]}/'+(c;0)mod'++\r#,x}    / where is (x .)' !
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
