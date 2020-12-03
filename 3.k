@@ -22,8 +22,7 @@ f:{+/inputs@+/(1;rT)*@[++\(y div dT)#,x,y;0;rT mod]}/
 / Third cut: tighten up
 
 i: 0:`3.txt
-r: #i
-c: #*i
+r: #i; c: #*i
 I: "#"=,/i
 f:{+/I@+/(1;c)*@[++\r#,x;0;c mod]}
 191~f 3 1
@@ -31,8 +30,7 @@ f:{+/I@+/(1;c)*@[++\r#,x;0;c mod]}
 
 / Or, revised nested:
 i: 0:`3.txt
-r: #i
-c: #*i
+r: #i; c: #*i
 I: "#"=i
 f:{+/{I[y][x]}/'+@[++\r#,x;0;c mod]}    / (x .)' broken in 2020.11.23?
 191~f 3 1
