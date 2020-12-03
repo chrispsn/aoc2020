@@ -5,7 +5,7 @@ input: "#"=0:`3.txt
 dT: #input
 rT: #*input
 
-f:{+/{input[x][y]}/'1_(dT>*;@[;1;rT mod]x+)\:0 0}
+f:{+/{input[x][y]}/'(dT>*;@[;1;rT mod]x+)\:x}
 f 1 3
 */f'(1 1;1 3;1 5;1 7;2 1)
 
