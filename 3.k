@@ -25,6 +25,6 @@ inputs: 0:`3.txt
 dT: #inputs
 rT: #*inputs
 inputs: "#"=,/inputs
-f:{+/inputs@+/(1;rT)*@[1_x*!x[1]div dT;0;rT mod]}
+f:{+/inputs@+/(1;rT)*@[x*1_x[1]div dT;0;rT mod]}
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
