@@ -1,4 +1,24 @@
-/ First cut
+/ Second cut - much cleaner when using an expr:
+
+linegroups: (@[;0;1b]@~#')^0:`4.txt
+trim: (,"")_" "\" "/
+passports: !'/ @[;0;`n$] @ +(+":"\'trim@)'linegroups
+
+/ Part 1
+#present:(7=#')#`cid_/:passports
+
+/ Part 2
+rules: :((`i$byr)within 1920 2003
+         (`i$iyr)within 2010 2021
+         (`i$eyr)within 2020 2031
+         (`i$-2_hgt) within (59 77;150 194)"cm"~-2#hgt
+         &/("#"=*hcl)&6=#"0123456789abcdef"#hcl
+         `amb`blu`brn`gry`grn`hzl`oth'`n$ecl
+         9=#"0123456789"#pid)
++/&/+present@'rules
+
+
+/ First cut - you can see it's messier
 
 input: 0:`4.txt
 linegroups: (0,&""~/:input)^input
@@ -17,3 +37,5 @@ rules: !/+-2^(`byr;{(`i$x)within 1920 2003}
               `pid;9=#"0123456789"#}
 
 +/&/'{(rules@!x)@'x[]}'present
+
+\\
