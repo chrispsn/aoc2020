@@ -5,7 +5,7 @@ trim: (,"")_" "\" "/
 passports: !'/ @[;0;`n$] @ +(+":"\'trim@)'linegroups
 
 / Part 1
-#present:(7=#')#`cid_/:passports
+#present:(7=#')#`cid_'passports
 
 / Part 2
 rules: :((`i$byr)within 1920 2003
