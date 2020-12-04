@@ -47,4 +47,11 @@ f: {+/{i[y][x]}/'+(c;0)mod'+x*/:!r}    / would rather (I .)' instead of {I{y][x]
 191~f 3 1
 1478615040~*/f'(1 1;3 1;5 1;7 1;1 2)
 
+/ Finally, Attila's killer solution (with minor tweaks):
+
+i:"#"=0:`3.txt
+f:{+/x@'(#*x)mod y*!#x}
+191~f[i;3]
+1478615040~*/{f[i x*!#i]y}'[1 1 1 1 2; 1 3 5 7 1]
+
 \\
