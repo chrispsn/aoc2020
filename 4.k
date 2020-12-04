@@ -12,7 +12,7 @@ rules: :((`i$byr)within 1920 2003
          (`i$iyr)within 2010 2021
          (`i$eyr)within 2020 2031
          (`i$-2_hgt)within(59 77;150 194)"cm"~-2#hgt
-         &/("#"=*hcl)&6=#"0123456789abcdef"#hcl
+         ("#"=*hcl)&6=#"0123456789abcdef"#hcl
          `amb`blu`brn`gry`grn`hzl`oth'`n$ecl
          9=#"0123456789"#pid)
 +/&/+present@'rules
