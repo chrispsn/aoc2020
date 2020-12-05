@@ -1,8 +1,7 @@
 / Second cut - much cleaner when using an expr:
 
 linegroups: (@[;0;1b]@~#')^0:`4.txt
-trim: (,"")_" "\" "/
-passports: !'/ @[;0;`n$] @ +(+":"\'trim@)'linegroups
+passports: !/'.[;(;0);`n$]@(+":"\',/" "\')'linegroups  / thanks Phineas!
 
 / Part 1
 #present:(7=#')#`cid_'passports
