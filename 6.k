@@ -1,4 +1,21 @@
-/ Second cut (WIP)
+/ Third cut - freq approach + comparison
+
+/ Standard
+\t:1000 6437 3229~{a:(@[;0;1b]@~#')^0:`6.txt
+ (+/(#?,/)'a; +/(##/(`b@#')#)'a)}[]
+
+/ Bitlists
+\t:1000 6437 3229~{a:(@[;0;1b]@~#')^0:`6.txt
+ (+/+/)'(|/'b;&/'(|/')#/:b:@[i;;1b]''a)}[]
+
+/ Freqs
+\t:1000 (`j 6437 3229)~{a:(@[;0;1b]@=':)^"\n",`c@1:`6.txt
+ +/'{(-1+(#?)'x;+/'(-1+a@'"\n")=a:freq'x)}a}[]
+ 
+/ timings: 2653 2636 1085
+
+
+/ Second cut - bitlist approach
 input: 0:`6.txt
 
 6437~+/(#?,/)'a:(@[;0;1b]@~#')^input
