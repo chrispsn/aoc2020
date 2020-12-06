@@ -1,6 +1,6 @@
 / Second cut (WIP)
 input: 0:`6.txt
-6437~+/(#?,/)'a:(~#')_'(@[;0;1b]@~#')^input     / undecided re: the best way to handle this..
+6437~+/(#?,/)'a:(`b@#')#'(@[;0;1b]@~#')^input     / probably a little faster
 3229~+/(##/)'a
 
 / First cut
