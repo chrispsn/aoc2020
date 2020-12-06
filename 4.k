@@ -5,6 +5,7 @@ d:`c"0"+!10
 +/&/+p@' :,[(`i$(byr;iyr;eyr;-2_hgt))within'(2000+(-80 3;10 21;20 31)),,(59 77;150 194)"m"=:/hgt
  ("#"=*hcl;6=#(d,"abcdef")#hcl;7=#hcl;`amb`blu`brn`gry`grn`hzl`oth'`n$ecl;9=#d#pid)]
 
+
 / Second cut - much cleaner when using an expr:
 
 linegroups: (@[;0;1b]@~#')^0:`4.txt
