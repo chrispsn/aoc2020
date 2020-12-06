@@ -1,7 +1,24 @@
 / Second cut (WIP)
 input: 0:`6.txt
-6437~+/(#?,/)'a:(`b@#')#'(@[;0;1b]@~#')^input     / probably a little faster
-3229~+/(##/)'a
+
+6437~+/(#?,/)'a:(@[;0;1b]@~#')^input
+3229~+/(##/(`b@#')#)'a
+i:`i"{"                               / sizing bitlist
+6437~+/+/|/'b:@[i#0b;;1b]''`i a       / can we convert to bitlists better?
+3229~+/+/&/'(|/')#/:b
+
+\t:1000 6437~+/(#?,/)'a:(@[;0;1b]@~#')^input
+\t:1000 3229~+/(##/(`b@#')#)'a
+\t:1000 6437~+/+/|/'b:@[i#0b;;1b]''`i a
+\t:1000 3229~+/+/&/'(|/')#/:b
+
+\\
+
+Times:
+619
+1560
+1520
+701
 
 / First cut
 input: 0:`6.txt
