@@ -14,7 +14,7 @@ f:{?x,(t@&x't`id)`o}
 326~-1+#f/:,START
 
 / Part 2
-r: {(x@&x`iq)`id}
+r: {(x`id) @& x`iq}
 START2: r t @& START~/:t`o
 f:{r t @& +/ x~/:\:t`o}
 5635~+/#'f\:START2
