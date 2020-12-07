@@ -1,5 +1,5 @@
 / First cut - would rather use symbols instead of strings,
-/ and maybe index into the table in part 2 instead of doing the ~/:\:
+/ and maybe index into a pre-grouped table in part 2 instead of doing the ~/:\:
 
 input: 0:`7.txt
 START:"shinygold"
