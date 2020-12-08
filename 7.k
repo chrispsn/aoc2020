@@ -1,16 +1,16 @@
 / Shortest, for posterity (but see faster version in 'second cut' below)
 
-START: "shinygold"
+START: ,"shinygold"
 i:" "\'0:`7.txt
 I:`iq`id!{(`i$x;y,'z)} . -1_ + ,/c:(-4^4_)'i
 O:`o!(,/'2#/:i)@&#'c
 t:+O,I
 
 f:{?x,(t@&x't`id)`o}
--1+#f/:,START
+-1+#f/:START
 
 f:{{(x`id) @& x`iq} t @& +/ x~/:\:t`o}
--1+/#'f\:,START
+-1+/#'f\:START
 
 
 / Second cut: convert string descriptions to ints, and switch from ~ to = (big speedup)
