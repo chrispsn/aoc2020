@@ -3,15 +3,15 @@
 input: 0:`7.txt
 
 i:" "\'input
-O:+`o!,/'2#/:i                                             / outies (descr only)
-I:({(`iq`id!(x;y,z))} .'' +' .[;(;0);`i$]@ -1_'+'-4^'4_'i) / innies (quantity, descr)
-t:,/O,/:'I
+I:`iq`id!{(x;y,'z)} . @[;0;`i$]@ -1_ + ,/c:(-4^4_)'i  / innies
+O:`o!(,/'2#/:i)@&#'c                                  / outies
+t:O,I
 
 / Symbol workaround: convert strings to ints
 alldesc: (t`id),t`o
 START:alldesc?"shinygold"
-t:+@[+t; `o; alldesc?]
-t:+@[+t; `id; alldesc?]
+t:@[t; `o; alldesc?]
+t:+@[t; `id; alldesc?]
 
 / Part 1
 f:{?x,(t@&x't`id)`o}
