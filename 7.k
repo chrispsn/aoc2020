@@ -1,4 +1,6 @@
 / Second cut: convert string descriptions to ints, and switch from ~ to = (big speedup)
+/ Don't like the capture of c (would prefer to just capture counts straight up)
+/ and would still like to remove the =/:\:
 
 input: 0:`7.txt
 
