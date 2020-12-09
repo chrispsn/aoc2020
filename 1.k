@@ -39,5 +39,5 @@ t: +`a`b!i@!2##i
 
 / approach 5: another way entirely from freekh
 f:{*(~0=)#x'i}
-f{f{((x+y)=2020)*x*y}x}
-f{f{f{((x+y+z)=2020)*x*y*z}[x;y]}x}
+f{f{(2020=x+y)*x*y}x}
+f{f{f{(2020=x+y+z)*x*y*z}[x;y]}x}
