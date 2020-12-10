@@ -2,10 +2,8 @@
 
 https://adventofcode.com/2020
 
-Also check out ngn's solutions:
+Also check out:
 
-https://bitbucket.org/ngn/k/src/master/a20/a.k
-
-And Mark Street's q solutions:
-
-https://github.com/mkst/aoc/tree/master/2020
+ngn's solutions: https://bitbucket.org/ngn/k/src/master/a20/a.k
+Mark Street's in q: https://github.com/mkst/aoc/tree/master/2020
+András Dőtsch's in q: https://github.com/adotsch/aoc
