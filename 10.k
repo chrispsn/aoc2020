@@ -3,7 +3,7 @@
 L:^0,input,m:3+|/input
 */1 3#freq-':L
 D:L!L#/:L+\:1+!3              / D:L!{L#1+x+!3}'L
-:/{@[x;D y;+;x y]}/[~!1+m;L]
+:/{@[x;D y;+;x y]}/[~!1+m;L]  / possibly :/{x[D y]+:x y}/[~!1+m;L]   but modified assignment in k9 only seems to return the values at the indexes you assign to
 
 
 / First cut
