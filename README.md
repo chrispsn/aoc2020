@@ -5,3 +5,7 @@ https://adventofcode.com/2020
 Also check out ngn's solutions:
 
 https://bitbucket.org/ngn/k/src/master/a20/a.k
+
+And Mark Street's q solutions:
+
+https://github.com/mkst/aoc/tree/master/2020
