@@ -21,7 +21,7 @@ L:^0,input,M
 D: L!{L#1+x+!3}'L  / which nodes can this node get to directly?
 start: (0!1)+L!0   / first node can get to itself one way
 / Propagate # of paths to this node, to next nodes
-f: {next:D@y; score:x@y; x+ \ next!score}
+f: {next:D@y; score:x@y; x+next!score}
 :/start f/L
 input
 
