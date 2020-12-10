@@ -36,3 +36,10 @@ D: L!{L^L^1+x+!3}'L
 start:((,0)!,1)+L!(#L)#0
 f: {next:D@y; score:x@y; x+next!#[#next;score]}
 *|f/[start;L]
+
+
+/ naive approach to part 2 (doesn't work at large numbers of edges)
+
+D:(0!0),=!/+,/{(!x),/:'x[]}@L!{(1+x+!3)#L}'L
+f:{,/D x}
+#f/:,M
