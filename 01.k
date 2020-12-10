@@ -36,3 +36,8 @@ t: +`a`b!i@!2##i
 t: +`a`b!i@!2##i
 */* select from t where 2020=a+b
 */* select from (update c:2020-a+b from t) where (c in i) & ~c in (a;b)
+
+/ approach 5: another way entirely from freekh
+f:{*(~)_x'i}
+f{f{(2020=x+y)*x*y}x}
+f{f{f{(2020=x+y+z)*x*y*z}[x;y]}x}
