@@ -2,7 +2,7 @@
 
 L:^0,i,3+|/i:`i$0:`10.txt
 */1 3#freq-':L
-D:L!{L#1+x+!3}'L
+D:L!L#/:L+\:1+!3            / D:L!{L#1+x+!3}'L
 start:(0!1)+L!0
 :/start{x+(D y)!x y}/L
 
