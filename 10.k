@@ -1,10 +1,9 @@
-/ Golfed
+/ Golfed - array version
 
-L:^0,i,3+|/i:`i$0:`10.txt
+L:^0,input,m:3+|/input
 */1 3#freq-':L
-D:L!L#/:L+\:1+!3            / D:L!{L#1+x+!3}'L
-start:(0!1)+L!0
-:/start{x+(D y)!x y}/L
+D: L!L#/:L+\:1+!3              / D:L!{L#1+x+!3}'L
+:/{@[x;D y;+;x y]}/[~!1+m;L]
 
 
 / First cut
