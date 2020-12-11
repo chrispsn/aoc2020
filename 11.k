@@ -3,25 +3,24 @@
 / Part 1
 
 input: 0:`11.txt
+
 ROWS:#input; COLS:#*input; MAX:ROWS*COLS
 chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input
 offsets:(,0 0)_,/{x,/:\:x}@-1 0 1
-adjacent: chairs+/:\:offsets
 OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; MAX]}
-a:OOB''adjacent
 
-next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@a]; 1b]}
+/ Part 1
+adj: OOB''chairs+/:\:offsets
+next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 EMPTY: MAX#0b
-+/next/:EMPTY
-
+2247~+/next/:EMPTY
 
 / Part 2 (super slow)
 m:ROWS|COLS
 cm:c,MAX
-a:{*cm#OOB'1_x+/:y*/:!m}/:\:[chairs;offsets]
-next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@a]; 1b]}
-+/next/:EMPTY
-
+adj:{*cm#OOB'1_x+/:y*/:!m}/:\:[chairs;offsets]
+next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@adj]; 1b]}
+2011~+/next/:EMPTY
 
 \\
 
