@@ -20,7 +20,7 @@ next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 
 / potential insight yet to be used:
 / to the chair to my right,
-/ i am the chair to my left...
+/ i am the chair to its left...
 / pre-compile a table of neighbours on that basis?
 / (work down each line)
 
