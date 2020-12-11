@@ -18,6 +18,11 @@ adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]  / speed killer!
 next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 2011~+/next/:EMPTY
 
+/ potential insight yet to be used:
+/ to the chair to my right,
+/ i am the chair to my left...
+/ pre-compile a table of neighbours on that basis?
+/ (work down each line)
 
 / FIRST CUT
 
