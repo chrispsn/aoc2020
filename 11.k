@@ -12,7 +12,7 @@ a:OOB''adjacent
 
 next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@a]; 1b]}
 EMPTY: MAX#0b
-/ 2247~+/next/:EMPTY
++/next/:EMPTY
 
 
 / Part 2 (super slow)
