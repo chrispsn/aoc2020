@@ -14,7 +14,7 @@ adj: OOB''chairs+/:\:offsets
  
 lines:offsets*/:\:1+!ROWS|COLS 
 cm:c,MAX 
-adj:{*cm#OOB'x+/:y}/:\:[chairs;lines] 
+adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]   / speed killer!
 2011~+/next[5]/:EMPTY 
 
 / potential insight yet to be used:
