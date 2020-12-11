@@ -2,27 +2,27 @@
 
 input: 0:`11.txt
 
-ROWS:#input; COLS:#*input; MAX:ROWS*COLS
-chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input
-offsets:(,0 0)_+-1+!3 3
-OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; MAX]}
-EMPTY: MAX#0b
-
-adj: OOB''chairs+/:\:offsets
-next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@adj]; 1b]}
-2247~+/next/:EMPTY
-
-lines:offsets*/:\:1+!ROWS|COLS
-cm:c,MAX
-adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]
-next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@adj]; 1b]}
-2011~+/next/:EMPTY
+ROWS:#input; COLS:#*input; MAX:ROWS*COLS 
+chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input 
+offsets:(,0 0)_+-1+!3 3 
+OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; MAX]} 
+EMPTY: MAX#0b 
+next:{[LIMIT;x] a:x@c; b:+/'x@adj; @[x&0b; c*(a&LIMIT>b)|~a|b; 1b]} 
+ 
+adj: OOB''chairs+/:\:offsets 
+2247~+/next[4]/:EMPTY 
+ 
+lines:offsets*/:\:1+!ROWS|COLS 
+cm:c,MAX 
+adj:{*cm#OOB'x+/:y}/:\:[chairs;lines] 
+2011~+/next[5]/:EMPTY 
 
 / potential insight yet to be used:
 / to the chair to my right,
 / i am the chair to its left...
 / pre-compile a table of neighbours on that basis?
 / (work down each line)
+
 
 / FIRST CUT
 
