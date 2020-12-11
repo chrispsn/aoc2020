@@ -4,7 +4,7 @@ input: 0:`11.txt
 
 ROWS:#input; COLS:#*input; MAX:ROWS*COLS
 chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input
-offsets:(,0 0)_,/{x,/:\:x}@-1 0 1
+offsets:(,0 0)_+-1+!3 3
 OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; MAX]}
 EMPTY: MAX#0b
 
@@ -14,7 +14,7 @@ next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 
 lines:offsets*/:\:1+!ROWS|COLS
 cm:c,MAX
-adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]  / speed killer!
+adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]
 next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 2011~+/next/:EMPTY
 
