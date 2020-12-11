@@ -6,10 +6,10 @@ ROWS:#input; COLS:#*input; MAX:ROWS*COLS
 chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input
 offsets:(,0 0)_,/{x,/:\:x}@-1 0 1
 OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; MAX]}
+EMPTY: MAX#0b
 
 adj: OOB''chairs+/:\:offsets
 next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@adj]; 1b]}
-EMPTY: MAX#0b
 2247~+/next/:EMPTY
 
 lines:offsets*/:\:1+!ROWS|COLS
