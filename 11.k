@@ -13,7 +13,13 @@ next:{@[x&0b; chairs*{(x&4>y)|~x|y}[x@chairs;+/'x@adjacent]; 1b]}
 EMPTY: MAX#0b
 +/next/:EMPTY
 
-/ Part 2 WIP...
+
+/ Part 2 ***WIP***
+
+a:{{$[#x;COLS/*x;MAX]}chairs#1_(MAX;y+)\:x}/:\:[chairs;offsets]
+next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@a]; 1b]}
++/next/:EMPTY
+
 
 \\
 
