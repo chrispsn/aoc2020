@@ -14,7 +14,7 @@ next:{@[x&0b; c*{(x&4>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 
 lines:offsets*/:\:1+!ROWS|COLS
 cm:c,MAX
-adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]
+adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]  / speed killer!
 next:{@[x&0b; c*{(x&5>y)|~x|y}[x@c; +/'x@adj]; 1b]}
 2011~+/next/:EMPTY
 
