@@ -2,20 +2,21 @@
 
 input: 0:`11.txt
 
-ROWS:#input; COLS:#*input; MAX:ROWS*COLS 
-chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input 
-offsets:(,0 0)_+-1+!3 3 
-OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; MAX]} 
-EMPTY: MAX#0b 
-next:{[LIMIT;x] a:x@c; b:+/'x@adj; @[x&0b; c*(a&LIMIT>b)|~a|b; 1b]} 
- 
-adj: OOB''chairs+/:\:offsets 
-2247~+/next[4]/:EMPTY 
- 
-lines:offsets*/:\:1+!ROWS|COLS 
-cm:c,MAX 
+ROWS:#input; COLS:#*input; CELLCOUNT:ROWS*COLS
+chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input
+offsets:(,0 0)_+-1+!3 3
+OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; CELLCOUNT]}
+/ slower, but maybe more vectorisable: OOB: {$[chairs'x; COLS/x; CELLCOUNT]}
+EMPTY: CELLCOUNT#0b
+next:{[LIMIT;x] a:x@c; b:+/'x@adj; @[x&0b; c*(a&LIMIT>b)|~a|b; 1b]}
+
+adj: OOB''chairs+/:\:offsets
+2247~+/next[4]/:EMPTY
+
+lines:offsets*/:\:1+!ROWS|COLS
+cm:c,CELLCOUNT
 adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]   / speed killer!
-2011~+/next[5]/:EMPTY 
+2011~+/next[5]/:EMPTY
 
 / potential insight yet to be used:
 / to the chair to my right,
