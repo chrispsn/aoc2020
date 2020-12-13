@@ -13,7 +13,7 @@ t:+d
 DIR:"ESWN"; OFFSETS:(1 0;0 -1;-1 0;0 1); TURNS:"LFR"
 offsets:{+/(t`n)*OFFSETS@DIR?t`inst}[]
 /(4*100)+ is a workaround for k9 mod not yet modding negative values
-direction:+/(+(:TURNS'inst)#t) :(n*inst="F")*OFFSETS@4 mod(4*100)+\(90 div n)*-1+TURNS?inst
+direction:+/ +[(:TURNS'inst)#t] :(n*inst="F")*OFFSETS@4 mod(4*100)+\(90 div n)*-1+TURNS?inst
 1424~+/{x|-x}'direction+offsets
 
 / Part 2
