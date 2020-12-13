@@ -18,13 +18,14 @@ direction:+/ +[(:TURNS'inst)#t] :(n*inst="F")*OFFSETS@4 mod(4*100)+\(90 div n)*-
 
 / Part 2
 
-r:{(x;{(-y;x)}/)/:y}
+rotate:{(x;{(-y;x)}/)/:y}
 seed:`ship`waypoint!(0 0;10 1)
-a:{x, (x,y)(:$["F"=inst; `ship!ship+n*waypoint
-              "LR"'inst; `waypoint!r[`i 4+(90 div n)*-1 1@"L"=inst;waypoint]   / eventually remove `i and 4+ in rotate
-              `waypoint!waypoint+n*OFFSETS@DIR?inst])}/[seed;t]
-/ +/{x|-x}a`ship
-63447~-+/a`ship
+updates::$["F"=inst; `ship!ship+n*waypoint
+           "LR"'inst; `waypoint!rotate[`i 4+(90 div n)*-1 1@"L"=inst;waypoint]   / del `i, 4+ in rotate
+           `waypoint!waypoint+n*OFFSETS@DIR?inst]
+end:{x,(x,y) updates}/[seed;t]
+/ +/{x|-x}end`ship
+63447~-+/end`ship
 / nb: testing on version where `j is not right - ended up adding x and y manually
 
 \\
