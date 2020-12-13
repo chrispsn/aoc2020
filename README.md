@@ -8,3 +8,4 @@ Also check out:
 - Mark Street's in q: https://github.com/mkst/aoc/tree/master/2020
 - András Dőtsch's in q: https://github.com/adotsch/aoc
 - Jay Foad's in Dyalog APL: https://github.com/jayfoad/aoc2020apl
+- pindash's in q/k9: https://github.com/pindash/adventQ/blob/master/2020.q
