@@ -17,7 +17,7 @@ eval:{$[=/i:br x
         eval@ ,/ @[;1;,eval@] @[;1 2;1_] (0,i)^x]}
 afold: {$[(#x)>1+s:-1+*x?PB
           afold@,/(s#x; ,$.,/3#s_x; (s+3)_x)
-          $. ,/$x]}
+          $.,/x]}
 f: eval tokenise@
 
 88534268715686=+/.'$f'i
