@@ -10,3 +10,7 @@ Also check out:
 - András Dőtsch's in q: https://github.com/adotsch/aoc
 - Jay Foad's in Dyalog APL: https://github.com/jayfoad/aoc2020apl
 - pindash's in q/k9: https://github.com/pindash/adventQ/blob/master/2020.q
+
+Reddit solution megathreads:
+
+[01](https://www.reddit.com/r/adventofcode/comments/k4e4lm/2020_day_1_solutions/) [02](https://www.reddit.com/r/adventofcode/comments/k52psu/2020_day_02_solutions/) [03](https://www.reddit.com/r/adventofcode/comments/k5qsrk/2020_day_03_solutions/) [04](https://www.reddit.com/r/adventofcode/comments/k6e8sw/2020_day_04_solutions/) [05](https://www.reddit.com/r/adventofcode/comments/k71h6r/2020_day_05_solutions/)
