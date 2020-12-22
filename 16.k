@@ -1,7 +1,7 @@
 / First cut (approx)
 
 i:0\0:`16.txt
-rules:0 1+/:/:`i$"-"\''@[;0 2]'-3#'rawrules:" "\'i[0]       / domain take would be nice instead of @[;0 2]'
+rules:0 1+/:/:`i$"-"\''@[;0 2]'-3#'rawrules:" "\'i[0]       / domain take would be nice instead of @[;0 2]'. Or 'dictify list' so can filter on domain
 myT:`i$","\*1_i[1]
 nearbyT: `i$1_","\'i[2]
 
