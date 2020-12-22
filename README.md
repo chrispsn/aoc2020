@@ -21,4 +21,4 @@ Reddit solution megathreads:
 
 [16](https://www.reddit.com/r/adventofcode/comments/ke2qp6/2020_day_16_solutions/) [17](https://www.reddit.com/r/adventofcode/comments/keqsfa/2020_day_17_solutions/) [18](https://www.reddit.com/r/adventofcode/comments/kfeldk/2020_day_18_solutions/) [19](https://www.reddit.com/r/adventofcode/comments/kg1mro/2020_day_19_solutions/) [20](https://www.reddit.com/r/adventofcode/comments/kgo01p/2020_day_20_solutions/)
 
-[21](https://www.reddit.com/r/adventofcode/comments/khaiyk/2020_day_21_solutions/) [22](https://www.reddit.com/r/adventofcode/comments/khyjgv/2020_day_22_solutions/) [23]() [24]() [25]()
+[21](https://www.reddit.com/r/adventofcode/comments/khaiyk/2020_day_21_solutions/) [22](https://www.reddit.com/r/adventofcode/comments/khyjgv/2020_day_22_solutions/) 23 24 25
