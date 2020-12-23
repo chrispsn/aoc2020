@@ -2,9 +2,9 @@
 
 input: 0:`22.txt
 i:`i$1_'0\input; newdecks:{(1_x,(*x),*y;1_y)}
-COMBAT:{$[(*x)>*y; newdecks[x;y]; |newdecks[y;x]]}.
 SCORE:{+/x*1+|!#x:,/2#x}
 
+COMBAT:{$[(*x)>*y; newdecks[x;y]; |newdecks[y;x]]}.
 31314~SCORE@({~(#'2#x)'0};COMBAT)/:i
 
 / +/z~\:(x;y) workaround for z'@,(x;y)
