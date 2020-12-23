@@ -1,25 +1,26 @@
 / Part 1 (revised) and part 2 (first cut; v slow)
-/ Need to unify 'score' functions...
+/ Need to unify 'score' functions... and maybe share GAME
 
 input: 0:`22.txt
 i:`i$1_'0\input
-NEWDECKS:{(1_x,(*x),*y;1_y)}
+ND:{(1_x,(*x),*y;1_y)}
+ROUND:{$[x@y; ND/y; |ND/|y]}
 
-SCORE:{+/x*1+|!#x:,/2#x}
-COMBAT:{$[(*x)>*y; NEWDECKS[x;y]; |NEWDECKS[y;x]]}/
-31314~SCORE@({~(#'2#x)'0};COMBAT)/:i
+SCORE:{+/x*1+|!#x:,/x}
+XWINS:>/*'
+WHILE:{~(#'x)'0}
+SCORE@(WHILE; ROUND[XWINS])/:i
 
 / data: (deck;history)
 SCORE:{+/x*1+|!#x:,/*x}
-WHILE:{~(+/(-1_y)~\:x)|(#'x)'0}/                      
-RCOMBAT:{
-    xwins: $[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]
-    new:   $[xwins; NEWDECKS/x; |NEWDECKS/|x]
-    (new;y,,new)}/
+WHILE:{~(+/(-1_y)~\:x)|(#'x)'0}/
+XWINS: {$[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]}
+RCOMBAT:{new:ROUND[XWINS]x; (new;y,,new)}/
 GAME:{(WHILE;RCOMBAT)/:(x;())}
-32760~SCORE@GAME i
+SCORE@GAME i
 
 \\
+
 
 / nb above:
 / +/(-1_y)~\:x workaround for *y'@,x
