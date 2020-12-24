@@ -3,7 +3,7 @@
 input: 0:`8.txt
 t:+d:`inst`arg!`n`i$+(" "\"+"_)'input
 
-/ parameterised on x(seed table) and y(state)
+/ parameterised on x(inst table) and y(exec state)
 exec:{y,:y           : [seen:seen,idx]         / replace with y[`seen],:y`idx
       y+(y,x[y`idx]) : [val:arg*inst=`acc
                         idx:(1;arg)inst=`jmp]}
