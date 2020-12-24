@@ -18,7 +18,7 @@ f[t]
 / Part 2
 nop:{.[t;(x;`inst);`jmp]}'&`nop=d`inst
 jmp:{.[t;(x;`inst);`nop]}'&`jmp=d`inst
-(`idx key f[;]'nop,jmp) [idx:stop]
+(`idx key f'nop,jmp) [idx:stop]
 
 \\
 
