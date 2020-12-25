@@ -19,7 +19,7 @@ f[t]
 nop:{.[t;(x;`inst);`jmp]}'&`nop=d`inst
 jmp:{.[t;(x;`inst);`nop]}'&`jmp=d`inst
 (`idx key f'nop,jmp) [idx:stop]
-`val#({x@=(+x)`idx}@f'nop,jmp)stop      / alt
+*(,stop)#{x@=(+x)`idx}@f'nop,jmp      / alt
 
 \\
 
