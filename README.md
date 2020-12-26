@@ -11,6 +11,7 @@ Also check out:
 - Jay Foad's in Dyalog APL: https://github.com/jayfoad/aoc2020apl
 - pindash's in q/k9: https://github.com/pindash/adventQ/blob/master/2020.q
 - copy's in ngn/k: http://copy.sh/kaoc20/
+- RvG's in k9: https://git.sr.ht/~rvg/adventofk/tree/master/item/2020
 
 Useful k resources:
 
