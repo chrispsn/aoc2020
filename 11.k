@@ -1,22 +1,23 @@
 / SECOND CUT (WIP optimisation)
 
-input: 0:`11.txt
+INPUT: 0:`11.txt
 
-ROWS:#input; COLS:#*input; CELLCOUNT:ROWS*COLS
-chairs: (^+!(ROWS;COLS)) @ c:&"L"=,/input
-offsets:(,0 0)_+-1+!3 3
-OOB: {$[&/x within' ((0;ROWS);(0;COLS)); COLS/x; CELLCOUNT]}
-/ slower, but maybe more vectorisable: OOB: {$[chairs'x; COLS/x; CELLCOUNT]}
+CELLCOUNT:*/DIM:(ROWS:#INPUT;COLS:#*INPUT)
+CHAIRS: (^+!DIM) @ C:&"L"=,/INPUT
+OFFSETS:(,0 0)_+-1+!3 3
+oob: {(CELLCOUNT;COLS/x)@&/&/(-1<;DIM>)@\:x}
+
 EMPTY: CELLCOUNT#0b
-next:{[LIMIT;x] a:x@c; b:+/'x@adj; @[x&0b; c*(a&LIMIT>b)|~a|b; 1b]}
+next:{[LIMIT;x] a:x@C; b:+/'x@ADJACENT; @[x&0b; C*(a&LIMIT>b)|~a|b; 1b]}
 
-adj: OOB''chairs+/:\:offsets
+ADJACENT: oob''CHAIRS+/:\:OFFSETS
 2247~+/next[4]/:EMPTY
 
-lines:offsets*/:\:1+!ROWS|COLS
-cm:c,CELLCOUNT
-adj:{*cm#OOB'x+/:y}/:\:[chairs;lines]   / speed killer!
+LINES:OFFSETS*/:\:1+!|/DIM
+CM:C,CELLCOUNT
+ADJACENT:{*CM#oob'x+/:y}/:\:[CHAIRS;LINES]   / speed killer!
 2011~+/next[5]/:EMPTY
+
 
 / potential insight yet to be used:
 / to the chair to my right,
