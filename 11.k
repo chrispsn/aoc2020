@@ -5,18 +5,19 @@ INPUT: 0:`11.txt
 CELLCOUNT:*/DIM:(ROWS:#INPUT;COLS:#*INPUT)
 CHAIRS: (^+!DIM) @ C:&"L"=,/INPUT
 OFFSETS:(,0 0)_+-1+!3 3
-oob: {(CELLCOUNT;COLS/x)@&/&/(-1<;DIM>)@\:x}
-
 EMPTY: CELLCOUNT#0b
-next:{[LIMIT;x] a:x@C; b:+/'x@ADJACENT; @[x&0b; C*(a&LIMIT>b)|~a|b; 1b]}
 
-ADJACENT: oob''CHAIRS+/:\:OFFSETS
+next:{[LIMIT;x] a:x@C; b:+/'x@ADJACENT; @[x&0b; C*(a&LIMIT>b)|~a|b; 1b]}
+ingrid: &/&/(-1<;DIM>)@\:  / takes flipped
+
+ADJACENT:{flat:,/x; (-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat}@CHAIRS+/:\:OFFSETS
 2247~+/next[4]/:EMPTY
 
 LINES:OFFSETS*/:\:1+!|/DIM
-CM:C,CELLCOUNT
-ADJACENT:{*CM#oob'x+/:y}/:\:[CHAIRS;LINES]   / speed killer!
+ADJACENT:{*(C#COLS/+(ingrid@+)#x+/:y),CELLCOUNT}/:\:[CHAIRS;LINES]   / speed killer!
 2011~+/next[5]/:EMPTY
+
+\\
 
 
 / potential insight yet to be used:
