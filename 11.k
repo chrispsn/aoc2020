@@ -11,6 +11,10 @@ next:{[LIMIT;x] a:x@C; b:+/'x@ADJACENT; @[x&0b; C*(a&LIMIT>b)|~a|b; 1b]}
 ingrid: &/&/(-1<;DIM>)@\:  / takes flipped
 
 ADJACENT:{flat:,/x; (-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat}@CHAIRS+/:\:OFFSETS
+/ nb: faster flat:
+/ 5252: \t:100 ADJACENT:{flat:,/x; (-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat}@CHAIRS+/:\:OFFSETS
+/ 7295: \t:100 ADJACENT:{+[(CELLCOUNT;COLS/f)]@'ingrid@f:+x}'CHAIRS+/:\:OFFSETS
+
 2247~+/next[4]/:EMPTY
 
 LINES:OFFSETS*/:\:1+!|/DIM
