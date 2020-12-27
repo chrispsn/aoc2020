@@ -17,8 +17,6 @@ ingrid: &/&/(-1<;DIM>)@\:  / takes flipped
 ADJACENT:{(-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat:,/x}@CHAIRS+/:\:OFFSETS
 2247~+/next[4]/:EMPTY
 
-2247~+/next[4]/:EMPTY
-
 LINES:OFFSETS*/:\:1+!|/DIM
 ADJACENT:{*x,CELLCOUNT}''{C#COLS/+(ingrid@+)#x+/:y}/:\:[CHAIRS;LINES]   / speed killer!
 2011~+/next[5]/:EMPTY
