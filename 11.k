@@ -12,8 +12,11 @@ ingrid: &/&/(-1<;DIM>)@\:  / takes flipped
 
 / nb: faster flat:
 / 5252: \t:100 ADJACENT:{flat:,/x; (-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat}@CHAIRS+/:\:OFFSETS
-/ 7295: \t:100 ADJACENT:{+[(CELLCOUNT;COLS/f)]@'ingrid@f:+x}'CHAIRS+/:\:OFFSETS
-ADJACENT:{flat:,/x; (-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat}@CHAIRS+/:\:OFFSETS
+/ abt same: \t:100 ADJACENT:{(-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+x}@(&CHAIRS!8)+(8*#CHAIRS)#OFFSETS
+/ 7205: \t:100 ADJACENT:{+[(CELLCOUNT;COLS/f)]@'ingrid@f:+x}'CHAIRS+/:\:OFFSETS
+ADJACENT:{(-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat:,/x}@CHAIRS+/:\:OFFSETS
+2247~+/next[4]/:EMPTY
+
 2247~+/next[4]/:EMPTY
 
 LINES:OFFSETS*/:\:1+!|/DIM
