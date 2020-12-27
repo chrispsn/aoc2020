@@ -17,7 +17,7 @@ ADJACENT:{flat:,/x; (-#OFFSETS)^(+(CELLCOUNT;COLS/f))@'ingrid@f:+flat}@CHAIRS+/:
 2247~+/next[4]/:EMPTY
 
 LINES:OFFSETS*/:\:1+!|/DIM
-ADJACENT:{*(C#COLS/+(ingrid@+)#x+/:y),CELLCOUNT}/:\:[CHAIRS;LINES]   / speed killer!
+ADJACENT:{*x,CELLCOUNT}''{C#COLS/+(ingrid@+)#x+/:y}/:\:[CHAIRS;LINES]   / speed killer!
 2011~+/next[5]/:EMPTY
 
 \\
