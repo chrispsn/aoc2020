@@ -10,7 +10,7 @@ SB:-1#B:,'"()"
 PB:,,"+"
 
 tokenise:("("{|/"()+*"'(x;y)}':)^" "_
-br:{c:+\-1 1@B?x
+br:{c:+\-1 1 B?x
     (o; o+((o:*x?SB)_c)?0)}
 eval:{$[=/i:br x
         afold x
