@@ -1,23 +1,22 @@
 / Part 1 (revised) and part 2 (~first~ second cut; v slow)
-/ Need to unify 'score' functions... and maybe share GAME
 
 input: 0:`22.txt
 i:`i$1_'0\input
-ND:{(1_x,(*x),*y;1_y)}
-ROUND:{$[x@y; ND/y; |ND/|y]}
+NEWDECKS:{(1_x,(*x),*y;1_y)}
+ROUND:{$[XWINS x; NEWDECKS/x; |NEWDECKS/|x]}
 
-SCORE:{+/x*1+|!#x:,/x}
-XWINS:>/*'
+SCORE:{+/x*|1+!#x:,/x}
+
 WHILE:&/#'
-SCORE@(WHILE; ROUND[XWINS])/:i
+XWINS:>/*'
+SCORE@(WHILE;ROUND)/:i
 
 / data: (deck;history)
-SCORE:{+/x*1+|!#x:,/*x}
-WHILE:{(~+/x~/:-1_y) & &/#'x}/        / workaround for ~x in -1_y
-XWINS: {$[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]}
-RCOMBAT:{new:ROUND[XWINS]x; (new;y,,new)}/
+WHILE:{(~+/x~/:-1_y) & &/#'x}/        / workaround for *y',x (y'x ok given rank-sensitivity?)
+XWINS:{$[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]}
+RCOMBAT:{new:ROUND x; (new;y,,new)}/
 GAME:{(WHILE;RCOMBAT)/:(x;())}
-SCORE@GAME i
+SCORE@*GAME i
 
 \\
 
