@@ -1,4 +1,4 @@
-/ Part 1 (revised) and part 2 (first cut; v slow)
+/ Part 1 (revised) and part 2 (~first~ second cut; v slow)
 / Need to unify 'score' functions... and maybe share GAME
 
 input: 0:`22.txt
@@ -8,12 +8,12 @@ ROUND:{$[x@y; ND/y; |ND/|y]}
 
 SCORE:{+/x*1+|!#x:,/x}
 XWINS:>/*'
-WHILE:{~(#'x)'0}
+WHILE:&/#'
 SCORE@(WHILE; ROUND[XWINS])/:i
 
 / data: (deck;history)
 SCORE:{+/x*1+|!#x:,/*x}
-WHILE:{~(+/(-1_y)~\:x)|(#'x)'0}/
+WHILE:{(~+/x~/:-1_y) & &/#'x}/        / workaround for ~x in -1_y
 XWINS: {$[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]}
 RCOMBAT:{new:ROUND[XWINS]x; (new;y,,new)}/
 GAME:{(WHILE;RCOMBAT)/:(x;())}
