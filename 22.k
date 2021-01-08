@@ -9,13 +9,14 @@ SCORE:{+/x*|1+!#x:,/x}
 
 WHILE:&/#'
 XWINS:>/*'
-SCORE@(WHILE;ROUND)/:i
+NEXT:ROUND
+SCORE@(WHILE;NEXT)/:i
 
 / data: (deck;history)
-WHILE:{(~+/x~/:y) & &/#'x}/        / workaround for *y',x (y'x ok given rank-sensitivity?)
+WHILE:{(~+/x~/:y) & &/#'x}/        / workaround for '~ x in y'
 XWINS:{$[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]}
-RCOMBAT:{(ROUND x;y,,x)}/
-GAME:{(WHILE;RCOMBAT)/:(x;())}
+NEXT:{(ROUND x;y,,x)}/
+GAME:{(WHILE;NEXT)/:(x;())}
 SCORE@*GAME i
 
 \\
