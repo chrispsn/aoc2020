@@ -13,8 +13,8 @@ NEXT:ROUND
 SCORE@(WHILE;NEXT)/:i
 
 / data: (deck;history)
-WHILE:{(~+/x~/:y) & &/#'x}/        / workaround for '~ x in y'
-XWINS:{$[&/(#'x)>n:*'x; **GAME@n#'1_'x; >/n]}
+WHILE:{(~+/x~/:y) & &/#'x}/    / workaround for '~ x in y'
+XWINS:{head:*'x; $[&/head<#'x; **GAME@head#'1_'x; >/head]}
 NEXT:{(ROUND x;y,,x)}/
 GAME:{(WHILE;NEXT)/:(x;())}
 SCORE@*GAME i
