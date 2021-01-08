@@ -22,9 +22,6 @@ SCORE@*GAME i
 \\
 
 
-/ nb above:
-/ +/(-1_y)~\:x workaround for *y'@,x
-
 / First cut of part 1. Working on part 2...
 
 input: 0:`22.txt
