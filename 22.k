@@ -12,9 +12,9 @@ XWINS:>/*'
 SCORE@(WHILE;ROUND)/:i
 
 / data: (deck;history)
-WHILE:{(~+/x~/:-1_y) & &/#'x}/        / workaround for *y',x (y'x ok given rank-sensitivity?)
+WHILE:{(~+/x~/:y) & &/#'x}/        / workaround for *y',x (y'x ok given rank-sensitivity?)
 XWINS:{$[&/(#'x)>n:*'x; #**GAME@n#'1_'x; >/n]}
-RCOMBAT:{new:ROUND x; (new;y,,new)}/
+RCOMBAT:{(ROUND x;y,,x)}/
 GAME:{(WHILE;RCOMBAT)/:(x;())}
 SCORE@*GAME i
 
