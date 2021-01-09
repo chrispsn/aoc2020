@@ -6,7 +6,7 @@ input: 0:`7.txt
 
 i:({"no"~x[4]}')_" "\'input   / empty bags stay out of table
 I:`iq`id!{(`i$x;y,'z)} . -1_ + ,/c:(-4^4_)'i
-O:`o!((,/2#)'i)@&#'c
+O:[o:((,/2#)'i)@&#'c]
 d:O,I
 
 / Symbol workaround: convert strings to ints
