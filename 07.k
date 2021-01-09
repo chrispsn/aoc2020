@@ -16,7 +16,7 @@ d:@[d; `o; alldesc?]
 t:+d:@[d; `id; alldesc?]
 
 / Part 1
-f:{?x,t[&(t`id)in x] :o}
+f:{?x,t[&(t`id)in x]`o}
 326~-1+#f/:,START
 
 / Part 2
