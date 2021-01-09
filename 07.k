@@ -11,8 +11,7 @@ d,: [o:((,/2#)'i)@&#'c]
 / Symbol workaround: convert strings to ints
 alldesc: d :id,o
 START:alldesc?"shinygold"
-d:@[d; `o; alldesc?]
-t:+d:@[d; `id; alldesc?]
+t:+d:@[d; `o`id; alldesc?]
 
 / Part 1
 f:{?x,t[&(t`id)in x]`o}
