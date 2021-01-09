@@ -7,10 +7,12 @@ input: 0:`7.txt
 i:({"no"~x[4]}')_" "\'input   / empty bags stay out of table
 d:`iq`id!{(`i$x;y,'z)} . -1_ + ,/c:(-4^4_)'i
 d,: [o:((,/2#)'i)@&#'c]
+START:"shinygold"
 
 / Symbol workaround: convert strings to ints
+/ (remove once working in k9)
 alldesc: d :id,o
-START:alldesc?"shinygold"
+START:alldesc?START
 t:+d:@[d; `o`id; alldesc?]
 
 / Part 1
