@@ -13,7 +13,7 @@ START:"shinygold"
 / (remove once working in k9)
 alldesc: d :id,o
 START:alldesc?START
-t:+d:@[d; `o`id; alldesc?]
+t:+@[d; `o`id; alldesc?]
 
 / Part 1
 f:{?x,t[&(t`id)in x]`o}
