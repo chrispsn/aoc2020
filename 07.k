@@ -1,42 +1,29 @@
-/ Shortest, for posterity (but see faster version in 'second cut' below)
-
-START: ,"shinygold"
-i:" "\'0:`7.txt
-I:`iq`id!{(`i$x;y,'z)} . -1_ + ,/c:(-4^4_)'i
-O:`o!(,/'2#/:i)@&#'c
-t:+O,I
-
-f:{?x,(t@&x't`id)`o}
--1+#f/:START
-
-f:{{(x`id) @& x`iq} t @& +/ x~/:\:t`o}
--1+/#'f\:START
-
-
 / Second cut: convert string descriptions to ints, and switch from ~ to = (big speedup)
 / Don't like the capture of c (would prefer to just capture counts straight up)
 / and would still like to remove the =/:\:
 
 input: 0:`7.txt
 
-i:" "\'input
+i:({"no"~x[4]}')_" "\'input   / empty bags stay out of table
 I:`iq`id!{(`i$x;y,'z)} . -1_ + ,/c:(-4^4_)'i
 O:`o!(,/'2#/:i)@&#'c
-t:O,I
+d:O,I
 
 / Symbol workaround: convert strings to ints
-alldesc: (t`id),t`o
+alldesc: d :id,o
 START:alldesc?"shinygold"
-t:@[t; `o; alldesc?]
-t:+@[t; `id; alldesc?]
+d:@[d; `o; alldesc?]
+t:+d:@[d; `id; alldesc?]
 
 / Part 1
-f:{?x,(t@&x't`id)`o}
+f:{?x,t[&(t`id)in x] :o}
 326~-1+#f/:,START
 
 / Part 2
-f:{{(x`id) @& x`iq} t @& +/ x=/:\:t`o}
+f:{(t @& +/ x=/:\:t`o) :id @& iq}
 5635~-1+/#'f\:,START
+
+\\
 
 
 / First cut - would rather use symbols instead of strings,
