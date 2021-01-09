@@ -20,7 +20,7 @@ f:{?x,t[&(t`id)in x]`o}
 326~-1+#f/:,START
 
 / Part 2
-f:{(t @& +/ x=/:\:t`o) :id @& iq}
+f:{(t @& +/ x=\:t`o) :id @& iq}
 5635~-1+/#'f\:,START
 
 \\
