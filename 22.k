@@ -5,7 +5,7 @@ i:`i$1_'0\input
 NEWDECKS:{(1_x,(*x),*y;1_y)}
 ROUND:{$[XWINS x; NEWDECKS/x; |NEWDECKS/|x]}
 
-SCORE:{+/x*|1+!#x:,/x}
+SCORE:{+/x*|1+!#x:,/x}         / sumproduct
 
 WHILE:&/#'
 XWINS:>/*'
@@ -13,7 +13,7 @@ NEXT:ROUND
 SCORE@(WHILE;NEXT)/:i
 
 / data: (deck;history)
-WHILE:{(~+/x~/:y) & &/#'x}/    / workaround for '~ x in y'
+WHILE:{(~+/x~/:y) & &/#'x}/    / prefer ~ x in y
 XWINS:{head:*'x; $[&/head<#'x; **GAME@head#'1_'x; >/head]}
 NEXT:{(ROUND x;y,,x)}/
 GAME:{(WHILE;NEXT)/:(x;())}
