@@ -4,7 +4,7 @@
 
 data:0 1^/:1_'(~#')^(,""),-1_0:`20.txt
 id:`i$(-1_5_**)'data; tiles:"#"=:/'data
-edges:,/{e:*'(+|)\:x; e,|'e}'tiles        / faster:,/{e:(*x;:/x;*+x;:/+x); e,|'e}'tiles. (3;r)\: => r\: via ATW
+edges:,/({x,|'x}@*'(+|)\:)'tiles          / faster:,/{e:(*x;:/x;*+x;:/+x); e,|'e}'tiles. (3;+|)\: => (+|)\: via ATW
 */&4=#'=(&id!8)@,/(1=#')#=2/+edges 
 
 
